@@ -1,0 +1,509 @@
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F6F5F3;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.section {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.item-detail {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 40px;
+    justify-content: center;
+    align-content: center;
+}
+
+.image-container {
+    width: 100%;
+}
+
+.description-container {
+    width: 100%;
+}
+
+.action-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.item-images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.main-image-wrapper {
+    background-color: #f6f5f3;
+    width: 500px;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    margin: auto;
+}
+
+.user-info-title {
+    margin-bottom: 20px;
+}
+
+.sub-images {
+    display: flex;
+    gap: 5px;
+}
+
+.sub-image {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: border 0.3s ease;
+}
+
+.sub-image:hover {
+    border: 2px solid #4C6FBF;
+}
+
+.item-info {
+    padding-left: 10px;
+}
+
+.item-state-category {
+    color: #4C6FBF;
+    font-size: 18px;
+    margin-bottom: 5px;
+    text-transform: capitalize;
+}
+
+.item-info h2 {
+    color: #252525;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.item-info p {
+    font-size: 14px;
+    margin-top: 5px;
+    color: #8A8A8A;
+}
+
+.action-button {
+    margin-top: 20px;
+    padding: 8px 20px;
+    width: 300px;
+    height: 50px;
+    background-color: #3483FA;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.action-button:hover {
+    background-color: #4C6FBF;
+}
+
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.alert-danger {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+
+.star-rating {
+    display: flex;
+    margin: 10px 0;
+    font-size: 22px;
+    margin-right: 10px;
+}
+
+.star {
+    cursor: pointer;
+    color: #ccc;
+    margin-right: 5px;
+    font-family: Arial, sans-serif;
+}
+
+.star:before {
+    content: '\2605';
+}
+
+.star.active {
+    color: #FFD700;
+}
+
+.questions-section {
+    max-width: 80%;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.questions-container {
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: 15px;
+    border-bottom: 2px solid #e0e0e0;
+    margin-bottom: 20px;
+}
+
+.question {
+    background-color: #F6F5F3;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.question-text {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.response-text {
+    font-size: 16px;
+    color: #8A8A8A;
+    margin-left: 30px;
+}
+
+.ask-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #3483FA;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.ask-button:hover {
+    background-color: #4C6FBF;
+}
+
+.questions-section textarea:focus {
+    border-color: #0074E4;
+}
+
+.questions-section textarea {
+    width: 70%;
+    padding: 4px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+    transition: border 0.3s ease;
+    resize: none;
+    height: 48px;
+    margin-right: 0;
+}
+
+.questions-section .ask-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0074E4;
+    color: #fff;
+    border: none;
+    padding: 4px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    transition: background-color 0.3s ease;
+    height: 48px;
+    margin-left: 8px;
+    margin-top: 0;
+}
+
+.questions-section .ask-button:hover {
+    background-color: #005bb5;
+}
+
+.questions-section .question {
+    border-bottom: 1px solid #e0e0e0;
+    padding: 10px 0;
+}
+
+.questions-section .question-text {
+    font-size: 16px;
+    font-weight: 600;
+    color: #555;
+    font-family: "Poppins", sans-serif;
+}
+
+.questions-section .response-text {
+    font-size: 14px;
+    color: #777;
+    padding: 5px 0;
+    font-family: "Poppins", sans-serif;
+}
+
+.item-detail-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-top: 100px;
+}
+
+.user-infos {
+    border: 1px solid #4C6FBF;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.user-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #252525;
+}
+
+.user-location {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 16px;
+    color: #8A8A8A;
+}
+
+.user-location span {
+    display: block;
+}
+
+.user-reputation {
+    font-size: 16px;
+    color: #8A8A8A;
+}
+
+.warning-message {
+    color: red;
+}
+
+/* Estilização do botão no estilo YouTube */
+.edit-button, .answer-button {
+    background-color: #f0f0f0; /* Cinza claro, semelhante ao do YouTube */
+    color: #606060; /* Cor do texto cinza escuro */
+    border: none;
+    padding: 8px 12px;
+    border-radius: 2px;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    margin-top: 8px;
+    text-align: center;
+}
+
+.edit-button:hover, .answer-button:hover {
+    background-color: #e0e0e0; /* Um cinza um pouco mais escuro no hover */
+}
+
+.edit-button:active, .answer-button:active {
+    transform: translateY(1px); /* Efeito de pressionar o botão */
+}
+
+/* Adicionando ícones ao botão (usando pseudo-elementos para demonstração) */
+.edit-button:before {
+    content: '\270E'; /* Código Unicode para um ícone de lápis */
+    margin-right: 6px;
+}
+
+.answer-button:before {
+    content: '\21A9'; /* Código Unicode para um ícone de retorno */
+    margin-right: 6px;
+}
+
+/* Estilização para o botão "Salvar" */
+.save-button {
+    background-color: #f0f0f0;
+    color: #606060;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 2px;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    margin-top: 8px;
+    text-align: center;
+}
+
+.save-button:hover {
+    background-color: #e0e0e0;
+}
+
+.save-button:active {
+    transform: translateY(1px);
+}
+
+.save-button:before {
+    content: '\1F4BE'; /* Código Unicode para um ícone de disco */
+    margin-right: 6px;
+}
+
+/* Estilização para o container que envolve a textarea e o botão "Salvar" */
+.response-edit-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espaçamento entre a textarea e o botão */
+}
+
+.question-form {
+    display: flex;
+    align-items: center; /* alinha verticalmente */
+    justify-content: space-between; /* coloca espaço entre a textarea e o botão */
+    gap: 10px; /* espaço entre os elementos, se seu navegador suportar */
+}
+
+.question-input {
+    flex: 1; /* faz a textarea ocupar todo o espaço disponível */
+    margin-right: 10px; /* espaço à direita da textarea */
+}
+
+.cancel-button {
+    background-color: #f0f0f0;
+    color: #606060;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 2px;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    margin-top: 8px;
+    text-align: center;
+}
+
+.cancel-button:hover {
+    background-color: #e0e0e0;
+}
+
+.cancel-button:active {
+    transform: translateY(1px);
+}
+
+.options-button {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    vertical-align: middle; /* Alinha com os outros botões */
+}
+
+.options-menu {
+    position: absolute; /* Torna o menu flutuante */
+    top: 100%;          /* Posiciona o menu logo abaixo do botão */
+    right: 0;     
+    background-color: #f0f0f0; /* Fundo cinza claro */
+    border: 1px solid #ccc; /* Borda cinza */
+    border-radius: 5px; /* Cantos arredondados */
+    padding: 8px; /* Espaçamento interno */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    z-index: 1; /* Coloca o menu acima dos outros elementos */
+}
+
+.options-menu button {
+    background-color: transparent;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    color: #606060; /* Cor do texto cinza escuro */
+    transition: color 0.3s;
+}
+
+.options-menu button:hover {
+    color: #0074E4; /* Cor do texto azul no hover */
+}
+
+.question-header {
+    position: relative; /* Isso é necessário para posicionar corretamente o .options-menu */
+    display: flex;
+    justify-content: space-between; /* Alinha o conteúdo nas extremidades */
+}
+
+
+@media only screen and (max-width: 768px) {
+    body, .container, .main-content {
+        overflow: auto;
+    }
+
+    .item-detail {
+        grid-template-columns: 1fr; /* Muda para uma única coluna */
+        gap: 20px;
+        text-align: center;
+    }
+
+    .main-image-wrapper {
+        width: 100%;
+        height: auto;
+    }
+
+    .action-button {
+        width: 100%;
+    }
+
+    .questions-section textarea {
+        width: 100%;
+    }
+
+    .section {
+        max-width: 100%; /* Faz o conteúdo ocupar toda a largura disponível */
+        padding: 10px;
+    }
+
+    .user-infos {
+        padding: 10px;
+    }
+}

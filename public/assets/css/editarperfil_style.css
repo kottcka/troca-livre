@@ -1,0 +1,180 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    overflow: hidden;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/login-background.png");
+    background-size: cover;
+    background-position: center bottom;
+    z-index: -1; 
+}
+
+.register-container {
+    font-family: 'Poppins', sans-serif;
+    padding: 20px;
+    border-radius: 10px;
+    width: 500px;
+    min-height: 650px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    background-color: #ffffff;
+}
+
+.logo {
+    width: 300px;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+label {
+    font-family: 'Poppins', sans-serif;
+    display: block;
+    margin-top: 10px;
+    margin-left: 5px;
+    font-weight: normal;
+    text-align: left;
+}
+
+input {
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.input-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.input-col {
+    flex: 1;
+    margin: 0 5px;
+}
+
+.register-button {
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    padding: 15px;
+    background-color: #7B96D4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.delete-button {
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    padding: 15px;
+    background-color: hsl(0, 91%, 44%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.already-account {
+    font-family: 'Poppins', sans-serif;
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+    color: #7B96D4;
+    text-decoration: none;
+}
+
+
+.error {
+    font-size: 12px;
+    color: #f23d4f;
+    display: block;
+    height: 15px; 
+    margin-bottom: 5px; 
+}
+
+.success {
+    color: #00ff26a6;
+}
+
+input.invalid {
+    border-color: #f23d4f;
+}
+
+/* Styling the <select> element similar to the input fields */
+select {
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: #fff;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="6" viewBox="0 0 12 6"><path fill="none" stroke="#7B96D4" stroke-width="2" d="M1 1l5 4 5-4"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    padding-right: 30px;  /* Increased padding to make space for the arrow */
+}
+
+/* Adjust the focus style for the select to match the input */
+select:focus {
+    outline: none;
+    border-color: #7B96D4;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 200px;  /* Aumentando o padding horizontal para 35px */
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    text-align: center;
+}
+
+.cancel-button {
+    background-color: #ffffff; /* Cor de fundo cinza */
+    color: #333; /* Cor do texto preto */
+    margin-left: 10px;
+}
+
+.cancel-button:hover {
+    background-color: #d0d0d0; /* Um cinza um pouco mais escuro para o hover */
+}
+
+
+@media only screen and (max-width: 768px) {
+    .logo {
+        width: 145px;  /* Defina a largura desejada aqui */
+        height: auto; /* Isso manterá a proporção da imagem */
+    }
+    .already-account {
+        margin-top: 10px;  /* Ajuste o valor conforme necessário */
+    }
+}

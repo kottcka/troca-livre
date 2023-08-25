@@ -1,0 +1,220 @@
+.categories-container {
+    margin-top: 180px;
+}
+
+.sidebar {
+    width: 350px;
+    background-color: #4C6FBF;
+    color: white;
+    padding-top: 20px;
+    height: 97.9vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: left 0.3s; 
+}
+
+/* CSS for Hamburger Icon */
+#hamburger-icon {
+    display: none;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 999;
+}
+
+.category, .sub-option {
+    display: block;
+    color: white;
+    text-decoration: none; /* Remove o sublinhado de links */
+    padding: 10px 20px;
+    cursor: pointer;
+    border-bottom: 1px solid #5E80D1;
+    transition: background-color 0.3s, transform 0.3s;
+    text-align: center;
+    position: relative; 
+}
+
+.category:hover, .sub-option:hover {
+    background-color: #5E80D1;
+}
+
+.sub-option {
+    background-color: #4C6FBF;
+    margin-left: -10px;  
+    margin-right: -10px;  
+    padding-left: -10px;  
+    display: none;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s ease-out, background-color 0.3s ease;
+}
+
+.sub-option:hover {
+    background-color: #2A5193; 
+    transform: scale(1.02); 
+}
+
+.dropdown.active .sub-option {
+    display: block;
+    transform: scaleY(1);
+    transition: transform 0.5s ease-in; 
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    flex-wrap: wrap;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar {
+    width: 90%; /* Aumentado o comprimento da barra de busca para 90% */
+    padding: 10px;
+    border-radius: 35px;
+    margin: 0;
+    border: none;
+    outline: none;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+.logo {
+    width: 288px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.2);
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.footer {
+    text-align: center;
+    font-size: 16px;
+    color: white;
+    display: flex; 
+    align-items: center; 
+    padding: 10px;
+    border-top: 1px solid #5E80D1; 
+    margin-top: auto; 
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    margin-right: 100px;
+    position: relative;
+}
+
+.user-info a {
+    display: flex;
+    align-items: center;
+    color: #4C6FBF;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 10px;
+    transition: color 0.3s;
+}
+
+.user-info a:hover {
+    color: #5E80D1;
+    transform: scale(1.02);
+}
+
+.user-info svg {
+    width: 24px;
+    height: 24px;
+    fill: #4C6FBF;
+    margin-right: 5px;
+    margin-left: 50px;
+}
+
+.dropdown > span {
+    position: relative; 
+}
+
+.dropdown > span::after {
+    content: '';
+    border-style: solid;
+    border-width: 0 1.5px 1.5px 0;
+    display: inline-block;
+    height: 6px;
+    width: 6px;
+    color: #FFF;  
+    position: absolute; 
+    right: -25px;
+    top: 40%;
+    transform: translateY(-50%) rotate(45deg);
+    padding: 2px;
+    transition: transform 0.3s;
+}
+
+.dropdown.active > span::after {
+    transform: translateY(-50%) rotate(-135deg);
+}
+
+.search-bar2 {
+    visibility: hidden;
+}
+
+
+
+/* Media query for mobile screens */
+@media screen and (max-width: 768px) {
+    .sidebar {
+        left: -350px; /* Initially hidden on mobile screens */
+    }
+    #hamburger-icon {
+        display: block; /* Displaying the hamburger icon on mobile screens */
+    }
+    .sidebar {
+        position: fixed; /* Fazer a sidebar ser fixa apenas em telas menores */
+        left: -350px;    /* Inicialmente escondida em telas menores */
+    }
+    .top-bar {
+        justify-content: center; /* Centraliza os itens horizontalmente */
+    }
+    .logo-container {
+        width: 100%; /* Ocupa toda a largura disponível */
+        justify-content: center; /* Centraliza o logo horizontalmente */
+    }
+    .logo {
+        width: 150px; /* Reduzindo o tamanho da logo */
+        height: auto;
+        order: 1; /* Definindo a ordem de exibição */
+    }
+    .search-bar {
+        width: 80%; /* Ajustando a largura da search bar para telas menores */
+        margin: 10px auto; /* Centralizando e adicionando margem vertical */
+        order: 2; /* Definindo a ordem de exibição após a logo */
+    }
+    .user-info .user-greeting {
+        display: none; /* Ocultando a saudação ao usuário */
+    }
+    .user-info a {
+        position: fixed; 
+        top: 10px;
+        right: 10px;  /* Posiciona o botão no canto superior direito */
+        z-index: 1000; 
+    }
+
+    .user-info a svg + span {
+        display: none; /* Esconde o texto do botão */
+    }
+}

@@ -1,0 +1,128 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden; /* Impede a rolagem na página */
+}
+
+/* Div para exibir a imagem de fundo */
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/login-background.png"); /* Substitua "path_to_background_image.png" pelo caminho da imagem de fundo em formato PNG */
+    background-size: cover;
+    background-position: center bottom; /* Ajuste para centralizar horizontalmente e alinhar na parte inferior */
+    z-index: -1; /* Coloca a imagem de fundo atrás do conteúdo */
+}
+
+.login-container {
+    font-family: 'Poppins', sans-serif;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px; /* Aumentando a largura para 400px */
+    height: 520px; /* Aumentando a altura para 500px */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+}
+
+.logo {
+    width: 300px;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+label {
+    font-family: 'Poppins', sans-serif;
+    display: block;
+    margin-top: 10px;
+    margin-left: 5px;
+    font-weight: normal;
+    text-align: left;
+}
+
+input {
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-button {
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    padding: 15px;
+    background-color: #7B96D4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 16px; /* Adicionando o tamanho de fonte de 16 pixels */
+}
+
+.forgot-password {
+    font-family: 'Poppins', sans-serif;
+    display: block;
+    text-align: right;
+    margin-top: 5px;
+    color: #7B96D4;
+    text-decoration: none;
+}
+
+.create-account {
+    font-family: 'Poppins', sans-serif;
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+    color: #7B96D4;
+    text-decoration: none;
+}
+
+.text-danger {
+    font-family: 'Poppins', sans-serif;
+    display: block;
+    text-align: left;
+    margin-top: 5px;
+    color: red;
+    text-decoration: none;
+}
+
+.error-container {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.success {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: green;
+    font-weight: bold;
+}
+.loading-overlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 1000;
+    text-align: center;
+    padding-top: 50%;
+}
+
+.loading-overlay span {
+    font-size: 1.5em;
+    color: #000;
+}

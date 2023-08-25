@@ -1,0 +1,244 @@
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F6F5F3;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.main-content {
+    flex-grow: 1;
+    overflow: hidden;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+.section h2 {
+    color: #4C6FBF;
+    border-bottom: 2px solid #4C6FBF;
+    padding-bottom: 10px;
+    margin-top: 20px;
+}
+
+.products-container {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.solicitacao {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.solicitacao-info {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.item-images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.item-images img {
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.item-info {
+    flex: 1;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.item-info p:first-child {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.item-info p:last-child {
+    margin: 0;
+    margin-top: 20px;
+    line-height: 1.5;
+}
+
+
+.status-button {
+    padding: 8px 15px;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    cursor: not-allowed;
+    font-family: inherit;
+    transition: background-color 0.3s ease;
+}
+
+.status-button.pendente {
+    background-color: #FFD700;
+    color: #333;
+}
+
+.status-button.aceito {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+.status-button.negado {
+    background-color: #FF4F4F;
+    color: #fff;
+}
+
+.star-rating {
+    display: flex;
+    margin: 10px 0;
+    font-size: 28px;
+    margin-right: 10px;
+}
+
+.star {
+    cursor: pointer;
+    color: #ccc;
+    margin-right: 5px;
+    font-family: Arial, sans-serif;
+}
+
+.star:before {
+    content: '\2605';
+}
+
+.star.active {
+    color: #FFD700;
+}
+
+button[type=button] {
+    background: hsl(98%, 80%);
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    color: black;
+    font: 600 1.05rem/1 "Nunito", sans-serif;
+    letter-spacing: .05em;
+    overflow: hidden;
+    padding: 1.15em 3.5em;
+    min-height: 3.3em;
+    position: relative;
+    text-transform: lowercase;
+    margin: 10px 0;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    resize: none;
+}
+
+.avaliacao-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 0 20px;
+    flex-wrap: wrap; /* Adicione esta linha para permitir que o conteúdo do container se ajuste ao tamanho disponível */
+}
+
+
+.btn {
+    background: hsl(98%, 80%);
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    color: black;
+    font: 600 0.9rem/1 "Nunito", sans-serif;
+    letter-spacing: .05em;
+    padding: 0.8em 1.5em;
+    min-height: 2.5em;
+    position: relative;
+    text-transform: lowercase;
+    width: 135px;
+}
+
+.contato-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 10px 15px;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    width: 300px;
+    box-sizing: border-box; /* Adicione esta linha para ajustar o conteúdo às margens */
+}
+
+
+.contato-info p {
+    margin: 5px 0;
+    line-height: 1.5;
+    display: flex; /* Adicione esta linha */
+    align-items: center; /* Adicione esta linha */
+}
+
+.contato-info i {
+    margin-right: 5px;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .products-container {
+        width: 100%;
+    }
+
+    .solicitacao {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .solicitacao-info {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .status-button {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .contato-info {
+        font-size: 12px;
+    }
+}

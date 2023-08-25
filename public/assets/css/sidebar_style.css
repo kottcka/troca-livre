@@ -1,0 +1,142 @@
+.categories-container {
+    margin-top: 180px;
+}
+
+.sidebar {
+    width: 350px;
+    background-color: #4C6FBF;
+    color: white;
+    padding-top: 20px;
+    height: 97.9vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: left 0.3s; 
+    z-index: 998;
+}
+
+#hamburger-icon {
+    display: none;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 999;
+}
+
+.category, .sub-option {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-bottom: 1px solid #5E80D1;
+    transition: background-color 0.3s, transform 0.3s;
+    text-align: center;
+    position: relative; 
+}
+
+.category:hover, .sub-option:hover {
+    background-color: #5E80D1;
+}
+
+.sub-option {
+    background-color: #4C6FBF;
+    margin-left: -10px;  
+    margin-right: -10px;  
+    padding-left: -10px;  
+    display: none;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s ease-out, background-color 0.3s ease;
+}
+
+.sub-option:hover {
+    background-color: #2A5193; 
+    transform: scale(1.02); 
+}
+
+.dropdown.active .sub-option {
+    display: block;
+    transform: scaleY(1);
+    transition: transform 0.5s ease-in; 
+}
+
+.footer {
+    text-align: center;
+    font-size: 16px;
+    color: white;
+    display: flex; 
+    align-items: center; 
+    padding: 10px;
+    border-top: 1px solid #5E80D1; 
+    margin-top: auto; 
+}
+
+.dropdown > span {
+    position: relative; 
+}
+
+.dropdown > span::after {
+    content: '';
+    border-style: solid;
+    border-width: 0 1.5px 1.5px 0;
+    display: inline-block;
+    height: 6px;
+    width: 6px;
+    color: #FFF;  
+    position: absolute; 
+    right: -25px;
+    top: 40%;
+    transform: translateY(-50%) rotate(45deg);
+    padding: 2px;
+    transition: transform 0.3s;
+}
+
+.dropdown.active > span::after {
+    transform: translateY(-50%) rotate(-135deg);
+}
+
+@media screen and (max-width: 768px) {
+    .sidebar {
+        left: -350px; /* Initially hidden on mobile screens */
+    }
+    #hamburger-icon {
+        display: block; /* Displaying the hamburger icon on mobile screens */
+    }
+    .sidebar {
+        position: fixed; /* Fazer a sidebar ser fixa apenas em telas menores */
+        left: -350px;    /* Inicialmente escondida em telas menores */
+    }
+    .top-bar {
+        justify-content: center; /* Centraliza os itens horizontalmente */
+    }
+    .logo-container {
+        width: 100%; /* Ocupa toda a largura disponível */
+        justify-content: center; /* Centraliza o logo horizontalmente */
+    }
+    .logo {
+        width: 150px; /* Reduzindo o tamanho da logo */
+        height: auto;
+        order: 1; /* Definindo a ordem de exibição */
+    }
+    .search-bar {
+        width: 80%; /* Ajustando a largura da search bar para telas menores */
+        margin: 10px auto; /* Centralizando e adicionando margem vertical */
+        order: 2; /* Definindo a ordem de exibição após a logo */
+    }
+    .user-info .user-greeting {
+        display: none; /* Ocultando a saudação ao usuário */
+    }
+    .user-info a {
+        position: fixed; 
+        top: 10px;
+        right: 10px;  /* Posiciona o botão no canto superior direito */
+        z-index: 1000; 
+    }
+
+    .user-info a svg + span {
+        display: none; /* Esconde o texto do botão */
+    }
+}

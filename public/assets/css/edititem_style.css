@@ -1,0 +1,265 @@
+/* Estilos gerais */
+body, input, textarea {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    background-color: #F6F5F3;
+}
+.container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.section {
+    max-width: 850px; /* Aumentei a largura máxima para 850px */
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    zoom: 0.9;
+    overflow: auto;
+}
+
+.section h2 {
+    color: #4C6FBF;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+.input-style {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+.input-style:focus {
+    border-color: #4C6FBF;
+    outline: none;
+}
+
+textarea.input-style {
+    resize: none;
+}
+
+/* Estilos do botão "Submit" (Confirmar) */
+button[type="submit"] {
+    background-color: #4C6FBF;
+    color: #FFFFFF;
+    font-size: 16px; /* Tamanho da fonte */
+    padding: 15px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #3a58ad;
+}
+
+/* Estilos do botão "Cancel" (Cancelar) */
+.cancel-button {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #4C6FBF;
+    border-radius: 5px;
+    color: #4C6FBF;
+    text-decoration: none;
+    margin-left: 15px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.cancel-button:hover {
+    background-color: #4C6FBF;
+    color: #FFFFFF;
+}
+
+.img-upload-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.img-upload-box {
+    border: 2px dashed #4C6FBF;
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-upload-box:hover {
+    background-color: #f0f4fd;
+}
+
+.img-uploader-link {
+    color: #4C6FBF;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.andes-message {
+    margin-top: 10px;
+    padding: 15px;
+    border: 1px solid red;
+    background-color: #fee7e7;
+    color: red;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.andes-badge {
+    margin-right: 10px;
+}
+
+.option-group {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.option {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #FFF;
+    border-bottom: 1px solid #ccc;
+}
+
+.option:last-child {
+    border-bottom: none;
+}
+
+.option[data-selected="true"] {
+    background-color: #4C6FBF;
+    color: #FFF;
+}
+
+.custom-option-group {
+    list-style-type: none;
+    padding: 0;
+    border: 1px solid #e6e6e6;
+    border-radius: 5px;
+}
+
+.custom-option {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 32px;
+    height: 48px;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.custom-option:last-child {
+    border-bottom: none;
+}
+
+.custom-option[data-selected="true"] .custom-option-text {
+    color: #3483fa;
+}
+
+.custom-option[data-selected="true"]:before {
+    border-left: 0.2222222222em solid #3483fa;
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 1.5px;
+}
+
+/* Ajuste no tamanho da fonte para o dropdown "Categoria" */
+.form-group select.input-style {
+    font-size: 16px;
+}
+
+/* Estilo para as imagens existentes */
+.item-image {
+    width: 90px; /* Tamanho um pouco maior que o sub-image para dar destaque */
+    height: 90px;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: border 0.3s ease;
+    margin: 10px;
+    position: relative;
+}
+
+.item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.item-image .remove-image {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: rgba(255, 0, 0, 0.6);
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    cursor: pointer;
+    font-size: 14px;   /* Ajuste o tamanho do x conforme necessário */
+    font-weight: bold; /* Torna o x em negrito */
+    text-decoration: none; /* Remove qualquer sublinhado da âncora */
+    display: flex;    /* Alinhamento vertical e horizontal do x */
+    align-items: center;
+    justify-content: center;
+}
+
+.item-image:hover .remove-image {
+    background-color: rgba(255, 0, 0, 0.8);
+}
+
+
+.item-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;  /* Espaçamento entre as imagens */
+}
+
+.form-group.buttons {
+    display: flex;           /* alinha os itens em uma única linha */
+    justify-content: flex-start; /* alinha os itens à esquerda */
+    align-items: center;     /* centraliza os itens verticalmente */
+}
+
+button[type="submit"],
+.cancel-button {
+    flex-shrink: 0;          /* evita que os botões encolham */
+    margin-right: 10px;     /* espaço à direita do botão */
+}

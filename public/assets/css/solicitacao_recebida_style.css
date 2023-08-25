@@ -1,0 +1,161 @@
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F6F5F3;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.main-content {
+    flex-grow: 1;
+    overflow: hidden;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.section h2 {
+    color: #4C6FBF;
+    border-bottom: 2px solid #4C6FBF;
+    padding-bottom: 10px;
+    margin-top: 20px;
+}
+
+.products-container {
+    width: 300px;
+    height: 450px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: block;
+    max-height: 600px;
+}
+
+.solicitacao {
+    width: 80%; /* Tornando o retângulo um pouco mais estreito */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.solicitacao-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.product-image span {
+    display: block;
+    text-align: center;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.product-image {
+    flex: 0 0 100px;
+}
+
+.product-image img {
+    width: 100%;
+    height: auto;
+    max-height: 100px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.product-actions {
+    display: flex;
+    align-items: center;
+}
+
+.accept-button,
+.deny-button {
+    padding: 8px 15px;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+}
+
+.accept-button {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+.deny-button {
+    background-color: #FF4F4F;
+    color: #fff;
+}
+    
+.modal-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.swap-icon {
+    display: flex;
+    align-items: center;
+    margin: 0 15px; /* some spacing between images and the SVG */
+}
+
+.swap-icon svg {
+    width: 70px;  /* Adjust this value as needed */
+    height: auto;
+}
+
+@media only screen and (max-width: 768px) {
+    .products-container {
+    width: 300px;
+    height: 450px;
+        width: 100%;
+    }
+
+    .solicitacao {
+        width: 90%;
+        flex-direction: column; /* Altera a direção de fluxo para coluna */
+        align-items: stretch; /* Garante que os elementos filhos ocupem toda a largura */
+    }
+
+    .solicitacao-info, .product-actions {
+        width: 100%; /* Ocupa toda a largura do .solicitacao */
+        margin-top: 10px; /* Espaço entre os elementos e os botões */
+    }
+
+    .product-actions {
+        flex-direction: row; /* Mantém os botões em uma linha */
+        justify-content: space-between; /* Espaçamento entre os botões */
+    }
+
+    .accept-button, .deny-button {
+        width: 100%; /* Cada botão ocupa quase metade da largura, deixando um pequeno espaço entre eles */
+        margin: 0; /* Remove a margem */
+    }
+
+    .swap-icon svg {
+        width: 50px;
+    }
+}
